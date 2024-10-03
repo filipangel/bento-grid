@@ -12,8 +12,6 @@ This is a solution to the [Bento grid challenge on Frontend Mentor](https://www.
   - [What I learned](#what-i-learned)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -38,7 +36,7 @@ Users should be able to:
 
 ### What I learned
 
-This was a hard one. The Bento box layout for the desktop version is a pain to set up unless you know about the grid template functionality. I'm sure there's a way to do this without using that option but I could not find it. Other than that, there is also the problem of images that overflow in a specific direction which took me a while. I learned a lot about flex and grid layouts through this challenge.
+This was a hard one. The Bento box layout for the desktop version is a pain to set up unless you know about the grid template functionality, especially because the order of the cards changes between the designs. I'm sure there's a way to do this without using that option but I could not find one that worked. Other than that, there is also the problem of images that overflow in a specific direction which took me a while. I learned a lot about flex and grid layouts through this challenge.
 
 ### Useful resources
 
