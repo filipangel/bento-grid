@@ -25,12 +25,11 @@ html {
 body {
 	font-size: 1.8rem;
 	background-color: var(--clr-background);
+	display: grid;
+	place-content: center;
 }
 
 .container {
-	display: grid;
-	place-content: center;
-	gap: 3rem;
 	width: 100%;
 	padding: 2rem;
 	font-family: "DM Sans", sans-serif;
@@ -50,6 +49,8 @@ h2 {
 	border-radius: 1rem;
 	width: 32rem;
 	padding: 1.5rem;
+	overflow: hidden;
+	margin-bottom: 3rem;
 }
 
 .title-card {
@@ -60,6 +61,7 @@ h2 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	grid-area: box2;
 }
 
 .title-card img {
@@ -85,6 +87,7 @@ h2 {
 
 .platforms-card {
 	background-color: var(--clr-white);
+	grid-area: box5;
 }
 
 .platforms-card img {
@@ -95,7 +98,7 @@ h2 {
 .posting-card {
 	background-color: var(--clr-yellow-500);
 	height: 20.8rem;
-	overflow: hidden;
+	grid-area: box6;
 }
 
 .posting-card img {
@@ -106,6 +109,7 @@ h2 {
 .schedule-card {
 	background-color: var(--clr-purple-100);
 	text-align: center;
+	grid-area: box3;
 }
 
 .schedule-card h2 {
@@ -127,6 +131,7 @@ h2 {
 	background-color: var(--clr-purple-500);
 	padding: 1.5rem 4.5rem;
 	text-align: center;
+	grid-area: box8;
 }
 
 .grow-card img {
@@ -143,6 +148,7 @@ h2 {
 
 .growth-card {
 	background-color: var(--clr-white);
+	grid-area: box7;
 }
 
 .growth-card h1 {
@@ -162,6 +168,7 @@ h2 {
 .quicker-card {
 	background-color: var(--clr-yellow-100);
 	padding: 2rem;
+	grid-area: box1;
 }
 
 .quicker-card h2 span {
@@ -176,6 +183,7 @@ h2 {
 
 .ai-card {
 	background-color: var(--clr-yellow-500);
+	grid-area: box4;
 }
 
 .ai-card h2 {
@@ -184,4 +192,194 @@ h2 {
 
 .ai-card img {
 	width: 70%;
+}
+
+@media only screen and (min-width: 720px) {
+	.container {
+		display: grid;
+		gap: 2rem;
+		grid-template-areas:
+			"box1 box2"
+			"box3 box4"
+			"box5 box6"
+			"box7 box8";
+	}
+
+	.card {
+		text-align: center;
+		display: grid;
+		place-content: center;
+		padding: 2rem 2rem;
+		margin: 0;
+	}
+
+	img {
+		margin: 0 auto;
+	}
+
+	.posting-card {
+		height: auto;
+	}
+
+	.posting-card img {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 1400px) {
+	.card {
+		width: auto;
+		margin: 0;
+	}
+
+	.title-card h1 {
+		font-size: 6rem;
+		line-height: 6rem;
+	}
+
+	.title-card img {
+		width: 20rem;
+	}
+
+	.title-card p {
+		font-size: 2rem;
+	}
+
+	.quicker-card img {
+		width: 100%;
+		margin: 2rem auto;
+	}
+
+	.quicker-card h2 {
+		font-size: 4rem;
+		line-height: 1;
+		text-align: left;
+	}
+
+	.schedule-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.schedule-card h2 {
+		font-size: 3.5rem;
+		line-height: 1;
+		text-align: left;
+		margin-bottom: 1rem;
+	}
+
+	.schedule-card img {
+		width: 38rem;
+	}
+
+	.schedule-card p {
+		text-align: left;
+		font-size: 2rem;
+		margin-top: 2rem;
+	}
+
+	.ai-card {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.ai-card h2 {
+		font-size: 4rem;
+		line-height: 1;
+		text-align: left;
+	}
+
+	.ai-card img {
+		margin-top: 5rem;
+		width: 100%;
+	}
+
+	.platforms-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.platforms-card h2 {
+		margin-top: 1rem;
+		text-align: left;
+		font-size: 3rem;
+		line-height: 1;
+	}
+
+	.platforms-card img {
+		width: 30rem;
+	}
+
+	.posting-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.posting-card h2 {
+		font-size: 3rem;
+		line-height: 1;
+		text-align: left;
+		margin-top: 1rem;
+		position: relative;
+		bottom: -3rem;
+	}
+
+	.posting-card img {
+		position: relative;
+		bottom: -5rem;
+	}
+
+	.growth-card h1 {
+		font-size: 5rem;
+		text-align: left;
+	}
+
+	.growth-card img {
+		width: 80%;
+		margin: 0;
+	}
+
+	.growth-card p {
+		text-align: left;
+		margin-bottom: 4rem;
+	}
+
+	.grow-card {
+		display: flex;
+		align-items: center;
+	}
+
+	.grow-card h2 {
+		font-size: 3rem;
+		line-height: 1;
+		text-align: left;
+	}
+
+	.grow-card img {
+		height: 23rem;
+		width: auto;
+		margin-right: 1rem;
+	}
+
+	.container {
+		display: grid;
+		margin: 1rem;
+		grid-auto-rows: 7.5rem;
+		grid-auto-columns: 25rem;
+		gap: 2rem;
+		grid-template-areas:
+			"box1 box2 box2 box3"
+			"box1 box2 box2 box3"
+			"box1 box2 box2 box3"
+			"box1 box2 box2 box3"
+			"box1 box5 box6 box3"
+			"box4 box5 box6 box3"
+			"box4 box5 box6 box3"
+			"box4 box7 box8 box8"
+			"box4 box7 box8 box8"
+			"box4 box7 box8 box8";
+	}
 }
